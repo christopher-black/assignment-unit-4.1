@@ -1,12 +1,12 @@
-console.log('***** Function Practice *****')
+console.log('***** Function Practice *****');
 
 // Add the required code to complete the functions below
 // After _each_ function, use a console log to call the function
 // to test it and display the result
-var test
+
 // 1. Function to return 'Hello World!'
 function hello() {
-return 'Hello World!';
+  return 'Hello World!';
 }
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
@@ -73,7 +73,7 @@ console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll() {
-  let sum = 0
+  let sum = 0;
   // TODO: loop to add items
   return sum;
 }
@@ -96,4 +96,4 @@ module.exports = {
   helloName,
   addNumbers,
   multiplyThree,
-}
+};

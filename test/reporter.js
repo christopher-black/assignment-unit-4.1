@@ -8,6 +8,7 @@ const {
   EVENT_TEST_PASS,
 } = Mocha.Runner.constants;
 
+// Custom output to match our rubric
 class MyReporter {
   constructor(runner) {
     const stats = runner.stats;

@@ -37,5 +37,5 @@ const options = {
   contextName: 'Code formatting',  // Defaults to `eslint`, but can be any string
 };
 
-// Run the tests
+// Run the linter as it's own test
 lint(paths, options);
