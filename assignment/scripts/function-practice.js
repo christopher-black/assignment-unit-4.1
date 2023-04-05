@@ -87,3 +87,13 @@ function sumAll( ) {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+
+
+// Do not modify, used for automated testing
+module.exports = {
+  hello,
+  helloName,
+  addNumbers,
+  multiplyThree,
+}
