@@ -26,7 +26,7 @@ class MyReporter {
       .on(EVENT_TEST_PASS, (test, err) => {
         console.log(
           `\x1b[32m`,
-          `| ${test.title} | yes |`,
+          `| ${test.parent.title} | yes |`,
           `\x1b[0m`
         );
       })
