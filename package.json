@@ -1,0 +1,14 @@
+{
+  "name": "assignment-unit-4.1",
+  "version": "1.0.0",
+  "description": "This unit we'll be pulling together all of the Javascript techniques you've learned thus far as well as practicing with HTML & CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
