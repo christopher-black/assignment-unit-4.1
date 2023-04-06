@@ -15,7 +15,7 @@ describe('Automated tests', function () {
       expect(result, 'helloName() does not return anything').to.exist;
       result.should.be.a('string');
       result.length.toBeGreaterThan(0);
-      assert.equal(hello(), 'Hello, Your Name!');
+      assert.equal(result, 'Hello, Your Name!');
     });
   });
 });
