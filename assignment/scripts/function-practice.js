@@ -6,7 +6,7 @@ console.log('***** Function Practice *****');
 
 // 1. Function to return 'Hello World!'
 function hello() {
-return 'Hello World!'
+  return 'Hello World!';
 }
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
@@ -96,4 +96,7 @@ module.exports = {
   helloName,
   addNumbers,
   multiplyThree,
+  isPositive,
+  getLast,
+  find,
 };
