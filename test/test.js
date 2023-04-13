@@ -21,8 +21,8 @@ describe('Automated tests', function () {
     it(`Returns the string 'Hello, Your Name!'`, function () {
       const result = helloName('Your Name');
       expect(result, 'helloName() does not return anything').to.exist;
-      result.should.be.a('string');
-      result.length.toBeGreaterThan(0);
+      expect(result).to.be.a('string');
+      expect(result.length).to.be.greaterThan(0);
       assert.equal(result, 'Hello, Your Name!');
     });
   });
@@ -30,7 +30,7 @@ describe('Automated tests', function () {
     it(`Returns the sum of two numbers`, function () {
       const result = addNumbers(4, 5);
       expect(result, 'addNumbers() does not return anything').to.exist;
-      result.should.be.a('number');
+      expect(result).to.be.a('number');
       assert.equal(result, 9);
     });
   });
@@ -38,7 +38,7 @@ describe('Automated tests', function () {
     it(`Multiplies three numbers and returns the result`, function () {
       const result = multiplyThree(2, 3, 4);
       expect(result, 'multiplyThree() does not return anything').to.exist;
-      result.should.be.a('number');
+      expect(result).to.be.a('number');
       assert.equal(result, 24);
     });
   });
@@ -46,7 +46,7 @@ describe('Automated tests', function () {
     it(`Should check if number is positive`, function () {
       const result = isPositive(3);
       expect(result, 'isPositive() does not return anything').to.exist;
-      result.should.be.a('boolean');
+      expect(result).to.be.a('boolean');
       assert.equal(result, true);
       assert.equal(isPositive(0), false);
       assert.equal(isPositive(-3), false);
@@ -56,7 +56,7 @@ describe('Automated tests', function () {
     it(`Returns the last item in an Array`, function () {
       const result = getLast([2, 3, 4]);
       expect(result, 'getLast() does not return anything').to.exist;
-      result.should.be.a('number');
+      expect(result).to.be.a('number');
       assert.equal(result, 4);
     });
   });
@@ -64,7 +64,7 @@ describe('Automated tests', function () {
     it(`Finds an item in an Array`, function () {
       const result = find(3, [2, 3, 4]);
       expect(result, 'find() does not return anything').to.exist;
-      result.should.be.a('number');
+      expect(result).to.be.a('boolean');
       assert.equal(result, true);
       assert.equal(find(5, [2, 3, 4]), false);
     });
