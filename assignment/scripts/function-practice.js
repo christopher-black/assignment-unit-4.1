@@ -75,13 +75,16 @@ console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 function sumAll() {
   let sum = 0;
   // TODO: loop to add items
-  return sum;
+
+  // TODO: return the sum
 }
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+function allPositive() {
 
+}
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
@@ -99,4 +102,7 @@ module.exports = {
   isPositive,
   getLast,
   find,
+  isFirstLetter,
+  sumAll,
+  allPositive,
 };

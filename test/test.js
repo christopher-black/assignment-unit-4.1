@@ -8,6 +8,9 @@ const {
   isPositive,
   getLast,
   find,
+  isFirstLetter,
+  sumAll,
+  allPositive,
 } = require('../assignment/scripts/function-practice.js');
 
 
@@ -67,6 +70,50 @@ describe('Automated tests', function () {
       expect(result).to.be.a('boolean');
       assert.equal(result, true);
       assert.equal(find(5, [2, 3, 4]), false);
+    });
+  });
+  describe(`STRETCH: Checks the first letter of a string`, function () {
+    it(`STRETCH: Checks the first letter of a string`, function () {
+      const result = isFirstLetter('a', 'apple');
+      if (result === undefined) {
+        // Skip the stetch goal if not attempted
+        this.skip();
+      } else {
+        // Only add the stretch goal if attempted
+        expect(result).to.be.a('boolean');
+        assert.equal(result, true);
+        assert.equal(isFirstLetter('z', 'apple'), false);
+      }
+    });
+  });
+  describe(`STRETCH: Sum all numbers of an array`, function () {
+    it(`STRETCH: Sum all numbers of an array`, function () {
+      const result = sumAll([1, 2, 3, 4, 5]);
+      if (result === undefined) {
+        // Skip the stetch goal if not attempted
+        this.skip();
+      } else {
+        // Only add the stretch goal if attempted
+        expect(result).to.be.a('number');
+        assert.equal(result, 15);
+        assert.equal(sumAll([5, 10, 20]), 35);
+      }
+    });
+  });
+  describe(`STRETCH: All postive numbers`, function () {
+    it(`STRETCH: All positive number`, function () {
+      const original = [0, -2, 3, -4, 5];
+      const result = allPositive(original);
+      if (result === undefined) {
+        // Skip the stetch goal if not attempted
+        this.skip();
+      } else {
+        // Only add the stretch goal if attempted
+        assert.equal(result.length, 2);
+        assert.notEqual(result.indexOf(3), -1);
+        assert.notEqual(result.indexOf(5), -1);
+        assert.equal(original.length, 5);
+      }
     });
   });
 });
