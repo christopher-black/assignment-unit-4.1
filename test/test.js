@@ -1,18 +1,29 @@
-const assert = require('assert');
-const { expect } = require('chai');
-const {
-  hello,
-  helloName,
-  addNumbers,
-  multiplyThree,
-  isPositive,
-  getLast,
-  find,
-  isFirstLetter,
-  sumAll,
-  allPositive,
-} = require('../assignment/scripts/function-practice.js');
+let assert;
+let expect;
+if (typeof window === 'object') {
+  // Run tests in browser
+  assert = chai.assert;
+  expect = chai.expect;
+      // 'bdd' stands for "behavior driven development"
+      mocha.setup('bdd');
+} else {
+  // Run tests in Node.js
+  assert = require('assert');
+  expect = require('chai').expect;
 
+  const {
+    hello,
+    helloName,
+    addNumbers,
+    multiplyThree,
+    isPositive,
+    getLast,
+    find,
+    isFirstLetter,
+    sumAll,
+    allPositive,
+  } = require('../assignment/scripts/function-practice.js');
+}
 
 describe('Automated tests', function () {
   describe(`Returns the string 'hello'`, function () {
@@ -117,23 +128,6 @@ describe('Automated tests', function () {
     });
   });
 });
-
-const lint = require('mocha-eslint');
-
-// Array of paths to lint
-// Note: a seperate Mocha test will be run for each path and each file which
-// matches a glob pattern
-const paths = [
-  'assignment/scripts/function-practice.js',
-];
-
-const options = {
-  // Consider linting warnings as errors and return failure
-  strict: true,  // Defaults to `false`, only notify the warnings
-
-  // Specify the mocha context in which to run tests
-  contextName: 'Code formatting',  // Defaults to `eslint`, but can be any string
-};
-
-// Run the linter as it's own test
-lint(paths, options);
+if (typeof window === 'object') {
+  mocha.run();
+}

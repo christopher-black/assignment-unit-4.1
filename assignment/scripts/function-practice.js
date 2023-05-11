@@ -94,15 +94,15 @@ function allPositive() {
 
 
 // Do not modify, used for automated testing
-module.exports = {
-  hello,
-  helloName,
-  addNumbers,
-  multiplyThree,
-  isPositive,
-  getLast,
-  find,
-  isFirstLetter,
-  sumAll,
-  allPositive,
-};
+// export default {
+//   hello,
+//   helloName,
+//   addNumbers,
+//   multiplyThree,
+//   isPositive,
+//   getLast,
+//   find,
+//   isFirstLetter,
+//   sumAll,
+//   allPositive,
+// };
